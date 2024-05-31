@@ -11,21 +11,21 @@ import com.userCrudOperation.service.UserServiceI;
 
 @RestController
 public class HomeController {
-	
-@Autowired
-UserServiceI si;
 
-@GetMapping("/getone/{id}")
-public User getOne(@PathVariable int id)
-{
-		
-	User ui=si.getOne(id);
-	return ui;
-}
-@DeleteMapping("DeleteById/{id}")
-public String DeleteByData(@PathVariable int id)
-{
-	si.deleteById(id);
-	return "Data Deleted Successfully";
-}
+	@Autowired
+	UserServiceI si;
+
+	@GetMapping("/getone/{id}")
+	public User getOne(@PathVariable int id) {
+
+		User ui = si.getOne(id);
+		return ui;
+	}
+
+	@DeleteMapping("DeleteById/{id}")
+	public String DeleteByData(@PathVariable int id) {
+		si.deleteById(id);
+		return "Data Deleted Successfully";
+
+	}
 }
