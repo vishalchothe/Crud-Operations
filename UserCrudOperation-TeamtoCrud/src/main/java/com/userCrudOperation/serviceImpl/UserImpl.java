@@ -28,4 +28,15 @@ public class UserImpl implements UserServiceI{
 		}
 	}
 
+	@Override
+	public void deleteById(int id) {
+		Optional<User> ops=ur.findById(id);
+		if(ops.isPresent())
+		{
+			ops.get();
+			ur.deleteById(id);
+		}
+		
+	}
+
 }

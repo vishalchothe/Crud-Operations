@@ -6,4 +6,6 @@ public interface UserServiceI  {
 
 	User getOne(int id);
 
+	void deleteById(int id);
+
 }
