@@ -1,5 +1,6 @@
 package com.userCrudOperation.serviceImpl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,17 @@ public class UserImpl implements UserServiceI{
 			ops.get();
 			ur.deleteById(id);
 		}
+	}
 		
+	public void postAllData(User user) {
+	
+		ur.save(user);
+	}
+
+	@Override
+	public List<User> getAllData() {
+		// TODO Auto-generated method stub
+		return ur.findAll();
 	}
 
 }
