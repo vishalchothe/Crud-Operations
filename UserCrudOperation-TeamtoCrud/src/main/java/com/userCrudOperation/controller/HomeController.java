@@ -55,6 +55,7 @@ public class HomeController {
 		
 <<<<<<< HEAD
 		return "UpdateData Successfully!..";
+
 		
 	}
 =======
