@@ -28,4 +28,10 @@ public class UserImpl implements UserServiceI{
 		}
 	}
 
+	@Override
+	public void updateData(User u, int id) {
+		ur.save(u);
+		
+	}
+
 }
