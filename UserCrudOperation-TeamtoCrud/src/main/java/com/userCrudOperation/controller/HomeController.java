@@ -6,7 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+<<<<<<< HEAD
+import org.springframework.web.bind.annotation.PutMapping;
+=======
 import org.springframework.web.bind.annotation.PostMapping;
+>>>>>>> branch 'main' of https://github.com/vishalchothe/Crud-Operations.git
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +29,12 @@ public class HomeController {
 		User ui = si.getOne(id);
 		return ui;
 	}
+<<<<<<< HEAD
+	
+	@PutMapping("/updatedata/{id}")
+	public String updateData(@RequestBody User u, @PathVariable("id") int id ) {
+		si.updateData(u,id);
+=======
 
 
 	@DeleteMapping("DeleteById/{id}")
@@ -41,7 +51,13 @@ public class HomeController {
 	
 	@GetMapping("/getdata")
 	public List<User> getAllUser() {
+>>>>>>> branch 'main' of https://github.com/vishalchothe/Crud-Operations.git
 		
+<<<<<<< HEAD
+		return "UpdateData Successfully!..";
+		
+	}
+=======
 		List<User> list=si.getAllData();
 		
 		
@@ -51,4 +67,5 @@ public class HomeController {
 
 
 
+>>>>>>> branch 'main' of https://github.com/vishalchothe/Crud-Operations.git
 }

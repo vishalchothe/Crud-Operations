@@ -12,4 +12,6 @@ public interface UserServiceI  {
 
 	void deleteById(int id);
 
+	void updateData(User u, int id);
+
 }
