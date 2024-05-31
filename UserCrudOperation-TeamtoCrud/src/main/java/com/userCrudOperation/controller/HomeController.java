@@ -26,6 +26,7 @@ public class HomeController {
 	@PutMapping("/updatedata/{id}")
 	public String updateData(@RequestBody User u, @PathVariable("id") int id ) {
 		si.updateData(u,id);
+		
 		return "UpdateData Successfully!..";
 		
 	}
