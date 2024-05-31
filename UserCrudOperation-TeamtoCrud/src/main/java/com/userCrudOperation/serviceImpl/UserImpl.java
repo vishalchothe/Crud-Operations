@@ -1,5 +1,6 @@
 package com.userCrudOperation.serviceImpl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +30,30 @@ public class UserImpl implements UserServiceI{
 	}
 
 	@Override
+<<<<<<< HEAD
 	public void updateData(User u, int id) {
 		ur.save(u);
 		
+=======
+	public void deleteById(int id) {
+		Optional<User> ops=ur.findById(id);
+		if(ops.isPresent())
+		{
+			ops.get();
+			ur.deleteById(id);
+		}
+	}
+		
+	public void postAllData(User user) {
+	
+		ur.save(user);
+	}
+
+	@Override
+	public List<User> getAllData() {
+		// TODO Auto-generated method stub
+		return ur.findAll();
+>>>>>>> branch 'main' of https://github.com/vishalchothe/Crud-Operations.git
 	}
 
 }
