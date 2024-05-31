@@ -32,11 +32,11 @@ public class HomeController {
 	}
 	
 	@GetMapping("/getdata")
-	public String postCustomer() {
+	public List<User> getAllUser() {
 		
-		List<User> user=si.getAllData();
+		List<User> list=si.getAllData();
 		
-		return "get User Data Successfully..!!";
+		return list;
 	}
 
 
