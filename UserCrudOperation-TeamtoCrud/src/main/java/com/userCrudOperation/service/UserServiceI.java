@@ -1,5 +1,5 @@
 package com.userCrudOperation.service;
 
-public interface UserService  {
+public interface UserServiceI  {
 
 }
