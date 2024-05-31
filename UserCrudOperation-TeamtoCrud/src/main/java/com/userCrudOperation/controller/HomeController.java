@@ -44,6 +44,8 @@ public class HomeController {
 		
 		List<User> list=si.getAllData();
 		
+		
+		
 		return list;
 	}
 
